@@ -6,5 +6,5 @@
 !.vscode/extensions.json
 
 # compiled output
-/bin
-/obj
+bin/
+obj/
