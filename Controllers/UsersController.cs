@@ -52,7 +52,7 @@ namespace ngx_backend.Controllers
                 return NotFound();
             }
 
-            // only allow admins to access other user records
+            // Nur Admins dürfen andere User als sich selbst sehen
             var currentUserId = int.Parse(User.Identity.Name);
             if (id != currentUserId && !User.IsInRole(Role.Admin))
             {
