@@ -24,7 +24,7 @@ namespace ngx_backend.Controllers
         {
             try
             {
-                var user = _userService.Authenticate(userParam.Username, userParam.Password);
+                var user = _userService.Authenticate(userParam.email, userParam.Password);
                 return Ok(user);
             }
             catch (Exception ex)

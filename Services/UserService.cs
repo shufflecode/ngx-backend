@@ -24,7 +24,7 @@ namespace ngx_backend.Services
 
         public User Authenticate(string username, string password)
         {
-            var user = _context.Users.SingleOrDefault(x => x.Username == username && x.Password == password);
+            var user = _context.Users.SingleOrDefault(x => x.email == username && x.Password == password);
 
             if (user == null)
                 throw new AuthenticationException("Username or password incorrect.");
